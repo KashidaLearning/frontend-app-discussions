@@ -1,7 +1,6 @@
 @use "@openedx/paragon/styles/css/core/custom-media-breakpoints" as paragonCustomMediaBreakpoints;
 
 
-@import "~@edx/frontend-component-footer/dist/footer";
 @import "~@edx/frontend-component-header/dist/index";
 
 
@@ -219,7 +218,7 @@ body,
   margin-left: 17px;
 }
 
-header {
+.learning-header {
   .logo {
     margin-right: 1rem;
 
@@ -280,7 +279,7 @@ header {
   outline: none;
 }
 
-header {
+.learning-header {
   line-height: 28px;
   font-size: 18px !important;
 
@@ -698,5 +697,59 @@ th, td {
   body,
   #main {
     font-size: 10px;
+  }
+}
+
+/* Rowad standalone Discussions page */
+.rowad-discussions-main {
+  width: calc(100% - 3rem) !important;
+  max-width: 77.5rem;
+  min-width: 0;
+  min-height: 60vh;
+  margin: 3rem auto 4rem;
+  background-color: #fff;
+  border: 1px solid rgba(10, 48, 85, 0.12);
+  border-radius: 3rem;
+  box-shadow: 0 0.75rem 2rem rgba(0, 43, 54, 0.08);
+}
+
+[dir="rtl"] .rowad-discussions-main,
+[dir="rtl"] .rowad-discussions-main button,
+[dir="rtl"] .rowad-discussions-main input,
+[dir="rtl"] .rowad-discussions-main select,
+[dir="rtl"] .rowad-discussions-main textarea {
+  font-family: "Rowad Noto Kufi Arabic", "Noto Kufi Arabic", sans-serif !important;
+}
+
+html:not([dir="rtl"]) .rowad-discussions-main,
+html:not([dir="rtl"]) .rowad-discussions-main button,
+html:not([dir="rtl"]) .rowad-discussions-main input,
+html:not([dir="rtl"]) .rowad-discussions-main select,
+html:not([dir="rtl"]) .rowad-discussions-main textarea {
+  font-family: "Rowad Noto Sans", "Noto Sans", sans-serif !important;
+}
+
+.rowad-discussions-main #courseTabsNavigation,
+.rowad-discussions-main #courseTabsNavigation .nav-link {
+  font-family: inherit !important;
+}
+
+@media only screen and (max-width: 991.98px) {
+  .rowad-discussions-main {
+    width: calc(100% - 2rem) !important;
+    margin: 2rem auto 3rem;
+    border-radius: 2rem;
+  }
+}
+
+@media only screen and (max-width: 575.98px) {
+  .rowad-discussions-main {
+    width: calc(100% - 1rem) !important;
+    margin: 1.25rem auto 2rem;
+    border-radius: 1.5rem;
+  }
+
+  .rowad-discussions-main #courseTabsNavigation .container-xl {
+    padding-inline: 0.5rem;
   }
 }
