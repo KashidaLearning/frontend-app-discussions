@@ -701,16 +701,27 @@ th, td {
 }
 
 /* Rowad standalone Discussions page */
+html,
+body,
+#root,
+#root > div {
+  background-color: #f3f4f4 !important;
+}
+
 .rowad-discussions-main {
-  width: calc(100% - 3rem) !important;
-  max-width: 77.5rem;
+  box-sizing: border-box;
+  width: calc(100% - 48px) !important;
+  max-width: 1240px !important;
   min-width: 0;
   min-height: 60vh;
-  margin: 3rem auto 4rem;
-  background-color: #fff;
-  border: 1px solid rgba(10, 48, 85, 0.12);
-  border-radius: 3rem;
-  box-shadow: 0 0.75rem 2rem rgba(0, 43, 54, 0.08);
+  padding: 48px !important;
+  margin: 48px auto 72px !important;
+  background-color: #fff !important;
+  border: 0 !important;
+  border-radius: 48px !important;
+  box-shadow: none !important;
+  font-size: 1rem !important;
+  line-height: 1.5;
 }
 
 [dir="rtl"] .rowad-discussions-main,
@@ -718,7 +729,10 @@ th, td {
 [dir="rtl"] .rowad-discussions-main input,
 [dir="rtl"] .rowad-discussions-main select,
 [dir="rtl"] .rowad-discussions-main textarea {
-  font-family: "Rowad Noto Kufi Arabic", "Noto Kufi Arabic", sans-serif !important;
+  font-family:
+    "Rowad Noto Kufi Arabic",
+    "Noto Kufi Arabic",
+    sans-serif !important;
 }
 
 html:not([dir="rtl"]) .rowad-discussions-main,
@@ -726,7 +740,14 @@ html:not([dir="rtl"]) .rowad-discussions-main button,
 html:not([dir="rtl"]) .rowad-discussions-main input,
 html:not([dir="rtl"]) .rowad-discussions-main select,
 html:not([dir="rtl"]) .rowad-discussions-main textarea {
-  font-family: "Rowad Noto Sans", "Noto Sans", sans-serif !important;
+  font-family:
+    "Rowad Noto Sans",
+    "Noto Sans",
+    sans-serif !important;
+}
+
+.rowad-discussions-main #courseTabsNavigation {
+  padding: 0 !important;
 }
 
 .rowad-discussions-main #courseTabsNavigation,
@@ -734,19 +755,64 @@ html:not([dir="rtl"]) .rowad-discussions-main textarea {
   font-family: inherit !important;
 }
 
+/* Rowad primary Discussions actions. */
+.rowad-discussions-main .btn-brand,
+.rowad-discussions-main .btn-primary {
+  color: #fff !important;
+  background-color: #18504d !important;
+  border-color: #18504d !important;
+  border-radius: 12px !important;
+  box-shadow: none !important;
+}
+
+.rowad-discussions-main .btn-brand:hover,
+.rowad-discussions-main .btn-brand:focus,
+.rowad-discussions-main .btn-brand:active,
+.rowad-discussions-main .btn-primary:hover,
+.rowad-discussions-main .btn-primary:focus,
+.rowad-discussions-main .btn-primary:active {
+  color: #fff !important;
+  background-color: #0b312b !important;
+  border-color: #0b312b !important;
+  box-shadow: none !important;
+}
+
+.rowad-discussions-main .btn-outline-brand,
+.rowad-discussions-main .btn-outline-primary {
+  color: #18504d !important;
+  background-color: transparent !important;
+  border-color: #18504d !important;
+  border-radius: 12px !important;
+  box-shadow: none !important;
+}
+
+.rowad-discussions-main .btn-outline-brand:hover,
+.rowad-discussions-main .btn-outline-brand:focus,
+.rowad-discussions-main .btn-outline-brand:active,
+.rowad-discussions-main .btn-outline-primary:hover,
+.rowad-discussions-main .btn-outline-primary:focus,
+.rowad-discussions-main .btn-outline-primary:active {
+  color: #fff !important;
+  background-color: #18504d !important;
+  border-color: #18504d !important;
+  box-shadow: none !important;
+}
+
 @media only screen and (max-width: 991.98px) {
   .rowad-discussions-main {
-    width: calc(100% - 2rem) !important;
-    margin: 2rem auto 3rem;
-    border-radius: 2rem;
+    width: calc(100% - 40px) !important;
+    padding: 32px !important;
+    margin: 32px auto 56px !important;
+    border-radius: 32px !important;
   }
 }
 
 @media only screen and (max-width: 575.98px) {
   .rowad-discussions-main {
-    width: calc(100% - 1rem) !important;
-    margin: 1.25rem auto 2rem;
-    border-radius: 1.5rem;
+    width: calc(100% - 24px) !important;
+    padding: 20px 16px !important;
+    margin: 24px auto 40px !important;
+    border-radius: 24px !important;
   }
 
   .rowad-discussions-main #courseTabsNavigation .container-xl {
