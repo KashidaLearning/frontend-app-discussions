@@ -716,34 +716,39 @@ body,
   border: 0 !important;
   border-radius: 48px !important;
   box-shadow: none !important;
-  font-size: 1rem !important;
+  font-size: 18px !important;
   line-height: 1.5;
 }
 
 [dir="rtl"] .rowad-discussions-main,
-[dir="rtl"] .rowad-discussions-main button,
-[dir="rtl"] .rowad-discussions-main input,
-[dir="rtl"] .rowad-discussions-main select,
-[dir="rtl"] .rowad-discussions-main textarea {
+[dir="rtl"] .rowad-discussions-main *:not(.fa):not(.glyphicon):not([class*="sorting"]):not([class*="icon-cc"]):not([class*="mce-"]) {
   font-family:
     "Rowad Noto Kufi Arabic",
     "Noto Kufi Arabic",
+    "NotoNaskhArabic",
+    Arial,
     sans-serif !important;
 }
 
 html:not([dir="rtl"]) .rowad-discussions-main,
-html:not([dir="rtl"]) .rowad-discussions-main button,
-html:not([dir="rtl"]) .rowad-discussions-main input,
-html:not([dir="rtl"]) .rowad-discussions-main select,
-html:not([dir="rtl"]) .rowad-discussions-main textarea {
+html:not([dir="rtl"]) .rowad-discussions-main *:not(.fa):not(.glyphicon):not([class*="sorting"]):not([class*="icon-cc"]):not([class*="mce-"]) {
   font-family:
     "Rowad Noto Sans",
     "Noto Sans",
+    Arial,
     sans-serif !important;
 }
 
 .rowad-discussions-main #courseTabsNavigation {
   padding: 0 !important;
+  font-size: 18px !important;
+  line-height: 1.5;
+}
+
+.rowad-discussions-main #courseTabsNavigation .nav-link {
+  font-size: 18px !important;
+  line-height: 1.5;
+  font-weight: 400;
 }
 
 [dir="rtl"] .rowad-discussions-main #courseTabsNavigation,
