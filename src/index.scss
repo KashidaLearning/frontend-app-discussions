@@ -819,3 +819,45 @@ html:not([dir="rtl"]) .rowad-discussions-main textarea {
     padding-inline: 0.5rem;
   }
 }
+
+/* ROWAD DISCUSSIONS SEGMENTED NAVIGATION */
+.rowad-discussions-main .nav-button-group {
+  padding: 0 !important;
+  overflow: hidden;
+  background-color: #fff !important;
+  border: 1px solid #f08f62 !important;
+  border-radius: 12px !important;
+}
+
+.rowad-discussions-main .nav-button-group .nav-item {
+  margin: 0 !important;
+}
+
+.rowad-discussions-main .nav-button-group .nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  color: #f08f62 !important;
+  background-color: #fff !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.rowad-discussions-main .nav-button-group .nav-item + .nav-item .nav-link {
+  border-inline-start: 1px solid rgba(240, 143, 98, 0.45) !important;
+}
+
+.rowad-discussions-main .nav-button-group .nav-link:hover,
+.rowad-discussions-main .nav-button-group .nav-link:focus,
+.rowad-discussions-main .nav-button-group .nav-link.active,
+.rowad-discussions-main .nav-button-group .show > .nav-link {
+  color: #fff !important;
+  background-color: #f08f62 !important;
+}
+
+.rowad-discussions-main .nav-button-group .nav-link:focus-visible {
+  outline: 3px solid rgba(240, 143, 98, 0.35);
+  outline-offset: -3px;
+}
