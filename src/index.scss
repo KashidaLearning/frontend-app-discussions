@@ -447,10 +447,6 @@ body,
     }
   }
 
-  .nav-link.active,
-  .show>.nav-link {
-    background-color: var(--pgn-color-primary-500) !important;
-  }
 }
 
 .course-tabs-navigation {
@@ -750,9 +746,23 @@ html:not([dir="rtl"]) .rowad-discussions-main textarea {
   padding: 0 !important;
 }
 
-.rowad-discussions-main #courseTabsNavigation,
-.rowad-discussions-main #courseTabsNavigation .nav-link {
-  font-family: inherit !important;
+[dir="rtl"] .rowad-discussions-main #courseTabsNavigation,
+[dir="rtl"] .rowad-discussions-main #courseTabsNavigation .nav-link {
+  font-family:
+    "Rowad Noto Kufi Arabic",
+    "Noto Kufi Arabic",
+    "NotoNaskhArabic",
+    Arial,
+    sans-serif !important;
+}
+
+html:not([dir="rtl"]) .rowad-discussions-main #courseTabsNavigation,
+html:not([dir="rtl"]) .rowad-discussions-main #courseTabsNavigation .nav-link {
+  font-family:
+    "Rowad Noto Sans",
+    "Noto Sans",
+    Arial,
+    sans-serif !important;
 }
 
 /* Rowad primary Discussions actions. */
