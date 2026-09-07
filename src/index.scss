@@ -876,3 +876,8 @@ html:not([dir="rtl"]) .rowad-discussions-main #courseTabsNavigation .nav-link {
   outline: 3px solid rgba(240, 143, 98, 0.35);
   outline-offset: -3px;
 }
+
+/* ROWAD DISCUSSIONS ACTIVE TAB COLOR */
+#root .header-action-bar .navbar .nav-button-group .nav-item .nav-link.active {
+  background: #f08f62 !important;
+}
