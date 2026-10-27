@@ -8,10 +8,9 @@ import {
   matchPath, Route, Routes, useLocation, useMatch,
 } from 'react-router-dom';
 
-import { RowadFooter, RowadHeader } from '@edx/frontend-component-header';
-
 import { Spinner } from '../../components';
 import selectCourseTabs from '../../components/NavigationBar/data/selectors';
+import { CourseLocaleFooter, CourseLocaleHeader } from '../../course-locale';
 import { ALL_ROUTES, DiscussionProvider, Routes as ROUTES } from '../../data/constants';
 import DiscussionContext from '../common/context';
 import ContentUnavailable from '../content-unavailable/ContentUnavailable';
@@ -85,7 +84,7 @@ const DiscussionsHome = () => {
         {!enableInContextSidebar && (
         <>
           <DiscussionsConfirmEmailBanner />
-          <RowadHeader />
+          <CourseLocaleHeader />
         </>
         )}
         <main
@@ -188,7 +187,7 @@ const DiscussionsHome = () => {
           )}
           {!enableInContextSidebar && isEnrolled && (<DiscussionsProductTour />)}
         </main>
-        {!enableInContextSidebar && <RowadFooter />}
+        {!enableInContextSidebar && <CourseLocaleFooter />}
       </DiscussionContext.Provider>
     </Suspense>
   );

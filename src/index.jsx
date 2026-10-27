@@ -13,6 +13,7 @@ import {
 import { AppProvider, ErrorPage } from '@edx/frontend-platform/react';
 
 import Head from './components/Head/Head';
+import { CourseLocaleProvider } from './course-locale';
 import { DiscussionsHome } from './discussions';
 import messages from './i18n';
 import store from './store';
@@ -24,8 +25,10 @@ subscribe(APP_READY, () => {
   rootNode.render(
     <StrictMode>
       <AppProvider store={store}>
-        <Head />
-        <DiscussionsHome />
+        <CourseLocaleProvider>
+          <Head />
+          <DiscussionsHome />
+        </CourseLocaleProvider>
       </AppProvider>
     </StrictMode>,
   );
